@@ -1,0 +1,41 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
+{{ dtoNamespace }}
+
+class {{ class }} extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return false;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, mixed>
+     */
+    public function rules()
+    {
+        {{ rules }}
+    }
+
+    public function toDto(): {{ dto }}
+    {
+        $dto = new {{ dto }}();
+
+        foreach(get_class_vars({{ dto }}::class) as $key => $value) {
+            $dto->$key = $this->validated()[Str::snake($key)] ?? null;
+        }
+
+        return $dto;
+    }
+}

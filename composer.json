@@ -1,0 +1,31 @@
+{
+    "name": "hosseinkalateh/simple-dto",
+    "description": "Data Transfer Objects in a simple way for Laravel applications",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "dto",
+        "data transfer object",
+    ],
+    "authors": [
+        {
+            "name": "Hossein Kalateh",
+            "email": "hosseinkalateh77@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "hosseinkalateh\\SimpleDto\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "hosseinkalateh\\SimpleDto\\SimpleDtoServiceProvider"
+            ]
+        }
+    }
+}
