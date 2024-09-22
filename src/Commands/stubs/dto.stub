@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+
+class {{ class }}
+{
+    // Add your methods here
+}
+
