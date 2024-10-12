@@ -1,6 +1,7 @@
 {
     "name": "hosseinkalateh/simple-dto",
     "description": "Data Transfer Objects in a simple way for Laravel applications",
+    "license": "MIT",
     "type": "library",
     "keywords": [
         "laravel",
